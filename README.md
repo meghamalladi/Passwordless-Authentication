@@ -1,5 +1,5 @@
 
-# Structure:
+## Structure:
 
   
     passwordless-authentication/    
@@ -11,7 +11,7 @@
         |--lambdamodules/ Lambda modules for this project
         |--README.md
 
-# Dependencies:
+## Dependencies:
 1.Download the contents of the repository.
 
 2.'npm' is required for this project. If not required, install by using the command:
@@ -27,7 +27,10 @@
   
 4.Go to 'frontend' folder and run the command `$npm install`. All the required modules will be installed in the folder.
 
-# To build and run:
+## AWS Cognito
+  ////// to set up ///////
+
+## To build and run:
 
 1.Go to the 'public'. Run the command: 
   

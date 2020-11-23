@@ -31,6 +31,15 @@
 
 To set up AWS cognito, check out this medium article - /// to be posted ///
 
+1.Go to src folder and edit the file config.json with the appropriate details.
+
+    a.REGION is available in the top right corner of your aws service console.
+
+    b.USER_POOL_ID is available in the general settings of your user pool in your aws account as Pool Id.
+
+    c.APP_CLIENT_ID is available in the app clients tab of your user pool in your aws account App client id.
+
+
 ## To build and run:
 
 1.Go to the 'public'. Run the command: 

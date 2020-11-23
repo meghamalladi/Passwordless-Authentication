@@ -28,7 +28,8 @@
 4.Go to 'frontend' folder and run the command `$npm install`. All the required modules will be installed in the folder.
 
 ## AWS Cognito
-  ////// to set up ///////
+
+To set up AWS cognito, check out this medium article - /// to be posted ///
 
 ## To build and run:
 

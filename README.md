@@ -29,7 +29,7 @@
 
 ## AWS Cognito
 
-To set up AWS cognito, check out this medium article - /// to be posted ///
+To set up AWS cognito, check out my medium article - /// to be posted ///
 
 1.Go to src folder and edit the file config.json with the appropriate details.
 

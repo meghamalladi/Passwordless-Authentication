@@ -6,28 +6,22 @@ import img from "./img.jpg"
 export default function Home() {
 
     return (
-      // <Fragment>
+      <Fragment>
         <div className="box cta">
           <p className="has-text-centered">
             <img
               src={img} 
               style={{
-                // flex: 1,
-                // alignSelf: 'start',
                 aspectRatio : 1,
                 width: '100%  ',
                 height: undefined
               }}
-              // resizeMode= "contain"
             />
-
-    
-            {/* <Image style={styles.imageStyle} resizeMode={'cover'} source={img}/> */}
 
             <br></br>
 
           </p>
         </div>
-      // </Fragment>
+      </Fragment>
     )
 }

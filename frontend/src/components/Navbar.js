@@ -1,23 +1,12 @@
 import React, {Component} from 'react'
 import {Auth} from "aws-amplify"
-import { Button } from "element-react";
 import '../App.css';
+import { Redirect } from 'react-router-dom';
 
 export default class Navbar extends Component {
     
     
-    // handleLogout  = async event =>{
-    //     event.preventDefault();
 
-    //     try{
-    //         await Auth.signOut();
-    //         this.props.auth.setAuthStatus(false);
-    //         this.props.auth.setUser(null);
-    //         console.log(this.props.isAuthenticated)
-    //     }catch(error){
-    //     console.log(error.message);
-    //     }
-    //     this.props.history.push("/login")
     handleLogout = async event  => {
             event.preventDefault();
             console.log("U are logging out...");
@@ -30,21 +19,21 @@ export default class Navbar extends Component {
             }catch(e){
                 console.log(e)
             }
+            
+
     }   
     render(){
         return (
             <nav className="navbar" role="navigation" aria-label="main navigation">
-            {/* <div className="navbar-brand">
-            <a className="navbar-item" href="/">
-                <img src="hexal-logo.png" width="112" height="28" alt="hexal logo" />
-            </a>
-            </div> */}
+
 
                 <div className = "navbar-end">
                     <div className = "navbar-item ">
-                        {this.props.auth.isAuthenticated && this.props.auth.user && (
+                        {this.props.auth.isAuthenticated && this.props.auth.user && this.props.auth.user.attributes &&(
                             <p>
-                            Hello {this.props.auth.user.username}!
+                            Hello {this.props.auth.user.attributes.name}! 
+                            
+
                             </p>
                         )}
                         <div className = "buttons">
@@ -59,19 +48,18 @@ export default class Navbar extends Component {
                                         <strong>Login</strong>
                                     </a>
 
-
                                 </div>
 
                             )}
 
                             
                             {this.props.auth.isAuthenticated &&(
-                                // <Button href = "/" variant= "contained" color = "primary" onClick = {this.handleLogout} >Logout</Button> 
+                                <div>
+                                    <a href = "/" className = "button is-primary" onClick= {this.handleLogout}>
+                                    <strong>Log Out</strong>
 
-                                <a href="/" onClick= {this.handleLogout} className = "button is-primary">
-                                <strong>Log Out</strong>
-
-                                </a>
+                                    </a>
+                                </div>
                             )}
                         </div>
 

@@ -7,7 +7,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { Auth } from "aws-amplify";
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 class App extends Component{
@@ -42,7 +42,6 @@ class App extends Component{
           console.log(error.message);
         }
         this.setState({isAuthenticating: false});
-
     }
 
     render(){
@@ -65,7 +64,7 @@ class App extends Component{
                 <Route exact path="/" render ={(props) => <Home {...props} auth = {authProps} /> } />
                 <Route exact path = "/login" render= {(props)=> <Login {...props} auth = {authProps} /> } />
                 <Route exact path="/register" render = {(props)=> <Signup {...props} auth = {authProps} /> }  />
-                <Route exact path="/passwordInput" render = {(props)=> <PasswordInput {...props} auth = {authProps} /> }  />
+                <Route exact path="/passwordInput" render = {(props)=> <PasswordInput {...props} auth = {authProps} /> }  /> 
 
               </Switch>
             </div>

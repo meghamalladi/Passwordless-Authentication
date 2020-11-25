@@ -1,17 +1,14 @@
 import { render } from "react-dom";
 import React, { Component } from 'react';
 import { Auth } from "aws-amplify";
-// import FormErrors from "../FormErrors";
 import validate from "../utility/FormValidation";
 import "../../index.js"
 import Button from '@material-ui/core/Button';
 
 
 class Signup extends Component {
-    constructor(props){
-        super(props)
     
-        this.state = {
+    state = {
             phone:"",
             fullname:"",
             errors: {   
@@ -19,7 +16,7 @@ class Signup extends Component {
                 blankfield: false,
             }   
         }
-    }
+    // }
 
     handleSubmit = async event => {
         event.preventDefault();
@@ -61,7 +58,7 @@ class Signup extends Component {
         }else if (signUpResponse.userCondirmed){
             alert("Waiting for confirmation...")
         }
-        // this.props.history.push("/");
+        this.props.history.push("/");
 
 
     };
@@ -69,7 +66,6 @@ class Signup extends Component {
         this.setState({
           [event.target.id] : event.target.value
         });
-        // document.getElementById(event.target.id).classList.remove("is-danger");
     }
 
     render() {

@@ -33,7 +33,6 @@ export default class Navbar extends Component {
                             <p>
                             Hello {this.props.auth.user.attributes.name}! 
                             
-
                             </p>
                         )}
                         <div className = "buttons">

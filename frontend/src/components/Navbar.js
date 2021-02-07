@@ -26,7 +26,6 @@ export default class Navbar extends Component {
         return (
             <nav className="navbar" role="navigation" aria-label="main navigation">
 
-
                 <div className = "navbar-end">
                     <div className = "navbar-item ">
                         {this.props.auth.isAuthenticated && this.props.auth.user && this.props.auth.user.attributes &&(

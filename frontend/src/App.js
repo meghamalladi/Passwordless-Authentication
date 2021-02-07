@@ -13,7 +13,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 class App extends Component{
     state={
         isAuthenticated : false, //if the user has been authenticated 
-        isAuthenticating : true, //till the user has been authenticated
+        isAuthenticating : true, //To makes sure that the rendering doesn't happen until await fucntions run.
         isReady : false, //state between password input and login page
         user : null
     }

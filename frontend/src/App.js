@@ -12,9 +12,9 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class App extends Component{
     state={
-        isAuthenticated : false,
-        isAuthenticating : true,
-        isReady : false,
+        isAuthenticated : false, //if the user has been authenticated 
+        isAuthenticating : true, //till the user has been authenticated
+        isReady : false, //state between password input and login page
         user : null
     }
 
@@ -33,6 +33,7 @@ class App extends Component{
     
     async componentDidMount(){
         try{
+
           const session = await Auth.currentSession();
           this.setAuthStatus(true);
           console.log(session);
@@ -41,6 +42,7 @@ class App extends Component{
         }catch(error){
           console.log(error.message);
         }
+
         this.setState({isAuthenticating: false});
     }
 
